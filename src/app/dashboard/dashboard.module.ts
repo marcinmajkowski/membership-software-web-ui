@@ -7,7 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CustomersComponent } from './customers/customers.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerProfileViewComponent } from './customer/customer-profile-view/customer-profile-view.component';
-import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
+import { CustomerProfileEditComponent } from './customer/customer-profile-edit/customer-profile-edit.component';
 
 @NgModule({
   imports: [
@@ -21,7 +21,7 @@ import { CustomerEditComponent } from './customer/customer-edit/customer-edit.co
     CustomersComponent,
     CustomerComponent,
     CustomerProfileViewComponent,
-    CustomerEditComponent
+    CustomerProfileEditComponent
   ]
 })
 export class DashboardModule { }

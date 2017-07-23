@@ -4,7 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { CustomersComponent } from './customers/customers.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerProfileViewComponent } from './customer/customer-profile-view/customer-profile-view.component';
-import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
+import { CustomerProfileEditComponent } from './customer/customer-profile-edit/customer-profile-edit.component';
 
 const ROUTES: Routes = [
   {
@@ -17,7 +17,7 @@ const ROUTES: Routes = [
         component: CustomerComponent,
         children: [
           { path: '', component: CustomerProfileViewComponent },
-          { path: 'edit', component: CustomerEditComponent },
+          { path: 'edit', component: CustomerProfileEditComponent },
         ]
       },
       { path: '', redirectTo: 'customers', pathMatch: 'full'}
