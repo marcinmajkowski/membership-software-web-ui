@@ -6,11 +6,11 @@ import 'rxjs/add/operator/do';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-  selector: 'app-customer',
-  templateUrl: './customer.component.html',
-  styleUrls: ['./customer.component.scss']
+  selector: 'app-customer-profile',
+  templateUrl: './customer-profile.component.html',
+  styleUrls: ['./customer-profile.component.scss']
 })
-export class CustomerComponent implements OnInit, OnDestroy {
+export class CustomerProfileComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription;
 
