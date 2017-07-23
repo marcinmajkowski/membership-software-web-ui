@@ -20,9 +20,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserAnimationsModule,
     FlexLayoutModule,
     CustomMaterialModule,
-    AppRoutingModule,
     LoginModule,
     DashboardModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
