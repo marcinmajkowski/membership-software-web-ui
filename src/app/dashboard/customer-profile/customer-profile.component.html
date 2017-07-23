@@ -1,0 +1,4 @@
+<app-customer-profile-view *ngIf="!isEdit"
+                           [customer]="customer"></app-customer-profile-view>
+<app-customer-profile-edit *ngIf="isEdit"
+                           [customer]="customer"></app-customer-profile-edit>

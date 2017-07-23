@@ -1,16 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CustomerProfileEditComponent } from './customer-profile-edit.component';
-import { RouterTestingModule } from '@angular/router/testing';
 
-describe('CustomerProfileEditComponent', () => {
+xdescribe('CustomerProfileEditComponent', () => {
   let component: CustomerProfileEditComponent;
   let fixture: ComponentFixture<CustomerProfileEditComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CustomerProfileEditComponent ],
-      imports: [ RouterTestingModule ]
     })
     .compileComponents();
   }));
@@ -21,8 +19,7 @@ describe('CustomerProfileEditComponent', () => {
     fixture.detectChanges();
   });
 
-  // FIXME this does not work due to route.parent
-  xit('should be created', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
   });
 });
