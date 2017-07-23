@@ -21,6 +21,7 @@ describe('CustomerProfileEditComponent', () => {
     fixture.detectChanges();
   });
 
+  // FIXME this does not work due to route.parent
   xit('should be created', () => {
     expect(component).toBeTruthy();
   });
