@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
 import { CustomMaterialModule } from '../custom-material/custom-material.module';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -11,7 +12,8 @@ describe('DashboardComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ DashboardComponent ],
       imports: [
-        CustomMaterialModule
+        CustomMaterialModule,
+        RouterTestingModule,
       ]
     })
     .compileComponents();
