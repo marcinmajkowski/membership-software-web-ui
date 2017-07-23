@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { LoginModule } from './login/login.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LoginModule } from './login/login.module';
     BrowserAnimationsModule,
     FlexLayoutModule,
     CustomMaterialModule,
-    LoginModule
+    LoginModule,
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
