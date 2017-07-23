@@ -1,4 +1,7 @@
-<app-customer-profile-view *ngIf="!isEdit"
-                           [customer]="customer"></app-customer-profile-view>
-<app-customer-profile-edit *ngIf="isEdit"
-                           [customer]="customer"></app-customer-profile-edit>
+<ng-container *ngIf="isEdit$ | async; then edit else view"></ng-container>
+<ng-template #view>
+  <app-customer-profile-view [customer]="customer$ | async"></app-customer-profile-view>
+</ng-template>
+<ng-template #edit>
+  <app-customer-profile-edit [customer]="customer$ | async"></app-customer-profile-edit>
+</ng-template>
