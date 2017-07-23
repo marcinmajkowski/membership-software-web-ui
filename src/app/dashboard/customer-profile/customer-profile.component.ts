@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Customer } from '../../customer/customer.model';
 import { Observable } from 'rxjs/Observable';
+import { CustomerService } from '../../customer/customer.service';
 
 @Component({
   selector: 'app-customer-profile',
@@ -15,6 +16,8 @@ export class CustomerProfileComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private customerService: CustomerService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -22,4 +25,8 @@ export class CustomerProfileComponent implements OnInit {
     this.isEdit$ = this.route.queryParamMap.map(paramMap => paramMap.has('edit'));
   }
 
+  onCustomerUpdated(customerUpdateData: { current: Customer, updated: Customer }) {
+    this.customer$ = this.customerService.update$(customerUpdateData.current, customerUpdateData.updated);
+    this.customer$.subscribe(() => this.router.navigate(['./'], { relativeTo: this.route }));
+  }
 }

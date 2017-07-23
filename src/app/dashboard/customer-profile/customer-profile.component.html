@@ -3,5 +3,6 @@
   <app-customer-profile-view [customer]="customer$ | async"></app-customer-profile-view>
 </ng-template>
 <ng-template #edit>
-  <app-customer-profile-edit [customer]="customer$ | async"></app-customer-profile-edit>
+  <app-customer-profile-edit [customer]="customer$ | async"
+                             (customerUpdated)="onCustomerUpdated($event)"></app-customer-profile-edit>
 </ng-template>

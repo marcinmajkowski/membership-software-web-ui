@@ -1,4 +1,10 @@
-<p>
-  {{customer.firstName}} (edycja)
-</p>
-<button routerLink="./">Anuluj</button>
+<form [formGroup]="customerForm" novalidate (submit)="onSubmit()">
+  <div>
+    <label>
+      Imię:
+      <input formControlName="firstName">
+    </label>
+  </div>
+  <button type="button" routerLink="./">Anuluj</button>
+  <button type="submit" [disabled]="!customerForm.valid">Gotowe</button>
+</form>

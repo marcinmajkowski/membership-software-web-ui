@@ -9,6 +9,7 @@ import { CustomerProfileComponent } from './customer-profile/customer-profile.co
 import { CustomerProfileViewComponent } from './customer-profile/customer-profile-view/customer-profile-view.component';
 import { CustomerProfileEditComponent } from './customer-profile/customer-profile-edit/customer-profile-edit.component';
 import { CustomerModule } from '../customer/customer.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { CustomerModule } from '../customer/customer.module';
     DashboardRoutingModule,
     FlexLayoutModule,
     CustomMaterialModule,
+    ReactiveFormsModule,
     CustomerModule,
   ],
   declarations: [
