@@ -6,6 +6,8 @@ import { CustomMaterialModule } from '../custom-material/custom-material.module'
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CustomersComponent } from './customers/customers.component';
 import { CustomerComponent } from './customer/customer.component';
+import { CustomerProfileComponent } from './customer/customer-profile/customer-profile.component';
+import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 
 @NgModule({
   imports: [
@@ -14,6 +16,12 @@ import { CustomerComponent } from './customer/customer.component';
     FlexLayoutModule,
     CustomMaterialModule,
   ],
-  declarations: [DashboardComponent, CustomersComponent, CustomerComponent]
+  declarations: [
+    DashboardComponent,
+    CustomersComponent,
+    CustomerComponent,
+    CustomerProfileComponent,
+    CustomerEditComponent
+  ]
 })
 export class DashboardModule { }
