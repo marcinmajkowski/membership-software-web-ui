@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from '../../customer/customer.service';
+import { Observable } from 'rxjs/Observable';
+import { Customer } from '../../customer/customer.model';
 
 @Component({
   selector: 'app-customers',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor() { }
+  customers$: Observable<Customer[]>;
+
+  constructor(
+    private customerService: CustomerService,
+  ) { }
 
   ngOnInit() {
+    this.customers$ = this.customerService.findAll$();
   }
 
 }

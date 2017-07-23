@@ -1,5 +1,4 @@
 <p>
   customers works!
 </p>
-<button routerLink="./10">Go to 10</button>
-<button routerLink="./20">Go to 20</button>
+<button *ngFor="let customer of customers$ | async" routerLink="./{{customer.id}}">{{customer.firstName}}</button>
