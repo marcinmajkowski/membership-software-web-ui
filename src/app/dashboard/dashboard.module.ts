@@ -8,6 +8,7 @@ import { CustomersComponent } from './customers/customers.component';
 import { CustomerProfileComponent } from './customer-profile/customer-profile.component';
 import { CustomerProfileViewComponent } from './customer-profile/customer-profile-view/customer-profile-view.component';
 import { CustomerProfileEditComponent } from './customer-profile/customer-profile-edit/customer-profile-edit.component';
+import { CustomerModule } from '../customer/customer.module';
 
 @NgModule({
   imports: [
@@ -15,13 +16,14 @@ import { CustomerProfileEditComponent } from './customer-profile/customer-profil
     DashboardRoutingModule,
     FlexLayoutModule,
     CustomMaterialModule,
+    CustomerModule,
   ],
   declarations: [
     DashboardComponent,
     CustomersComponent,
-    CustomerProfileComponent,
     CustomerProfileViewComponent,
-    CustomerProfileEditComponent
+    CustomerProfileEditComponent,
+    CustomerProfileComponent,
   ]
 })
 export class DashboardModule { }
